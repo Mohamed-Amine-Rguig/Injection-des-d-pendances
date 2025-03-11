@@ -1,0 +1,2 @@
+me.medev.dependency_injection.repository.IDoaImpl2
+me.medev.dependency_injection.service.IServiceImpl
