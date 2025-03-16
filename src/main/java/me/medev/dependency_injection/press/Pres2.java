@@ -1,4 +1,4 @@
-package me.medev.dependency_injection.pres2;
+package me.medev.dependency_injection.press;
 
 
 import me.medev.dependency_injection.repository.IDoa;

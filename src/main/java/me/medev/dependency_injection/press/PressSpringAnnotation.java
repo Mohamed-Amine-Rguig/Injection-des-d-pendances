@@ -1,4 +1,4 @@
-package me.medev.dependency_injection.press3;
+package me.medev.dependency_injection.press;
 
 import me.medev.dependency_injection.service.IServiceImpl;
 import org.springframework.context.ApplicationContext;

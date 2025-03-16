@@ -50,7 +50,6 @@ dependency_injection/
 Les exemples d'utilisation de l'injection de dépendances sont disponibles dans les différentes classes du projet. Vous trouverez notamment:
 
 - Injection par constructeur
-- Injection par setter
 - Injection par champ
 - Utilisation des annotations @Autowired, @Component, @Service, @Repository, etc.
 
