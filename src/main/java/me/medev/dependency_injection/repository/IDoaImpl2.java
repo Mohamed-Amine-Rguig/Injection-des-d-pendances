@@ -2,7 +2,7 @@ package me.medev.dependency_injection.repository;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository("IDoaImpl2")
 public class IDoaImpl2 implements IDoa {
     @Override
     public double getData() {

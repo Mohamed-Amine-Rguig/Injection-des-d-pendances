@@ -13,6 +13,7 @@ public class Pres2{
 
     public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
 
+        System.out.println("Pres2: instantiate the service and the repository using a config.txt file and reflection");
         Scanner scanner = new Scanner(new File("config.txt"));
         String doaClassName = scanner.nextLine();
         Class doa = Class.forName(doaClassName);

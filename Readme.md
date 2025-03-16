@@ -1,59 +1,58 @@
 # Projet de Démonstration d'Injection de Dépendances
 
-## À propos
-
-Ce projet démontre l'utilisation de l'injection de dépendances dans une application Spring. L'injection de dépendances est un principe de conception qui permet de réduire le couplage entre les différentes classes d'une application.
-
-## Prérequis
-
-- Java 17 ou version ultérieure
-- IDE recommandé: IntelliJ IDEA ou Eclipse
-
-## Installation
-
-1. Clonez le dépôt:
-
-   ```bash
-   git clone [https://github.com/Mohamed-Amine-Rguig/Injection-des-d-pendances.git]
-   cd dependency_injection
-   ```
-
-2. Compilez le projet avec Maven:
-
-   ```bash
-   mvn clean install
-   ```
-
-3. Exécutez l'application:
-   ```bash
-   mvn spring-boot:run
-   ```
+Ce projet est une démonstration des différentes approches d'injection de dépendances en Java, notamment avec Spring.
 
 ## Structure du Projet
 
-```
-dependency_injection/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── me/
-│   │   │       └── medev/
-│   │   │           └── dependency_injection/
-│   │   └── resources/
-│   └── test/
-├── pom.xml
-└── Readme.md
-```
+- **repository**: Contient les interfaces et implémentations pour l'accès aux données
 
-## Utilisation
+  - `IDoa.java`: Interface définissant la méthode d'accès aux données
+  - `IDoaImpl.java`: Première implémentation qui retourne 1000
+  - `IDoaImpl2.java`: Seconde implémentation qui retourne 1908
 
-Les exemples d'utilisation de l'injection de dépendances sont disponibles dans les différentes classes du projet. Vous trouverez notamment:
+- **service**: Contient les services qui utilisent les repositories
 
-- Injection par constructeur
-- Injection par champ
-- Utilisation des annotations @Autowired, @Component, @Service, @Repository, etc.
+  - `IService.java`: Interface définissant la méthode de calcul
+  - `IServiceImpl.java`: Implémentation du service qui utilise IDoa
 
-## Technologies Utilisées
+- **press**: Contient les différentes démonstrations d'injection de dépendances
+  - `Pres1.java`: Injection de dépendances manuelle
+  - `Pres2.java`: Injection de dépendances avec réflexion et configuration par fichier
+  - `PressSpringAnnotation.java`: Injection de dépendances avec Spring et annotations
+  - `PressSpringXml.java`: Injection de dépendances avec Spring et configuration XML
 
-- Spring Boot 3.4.3
-- Java 17
+## Approches d'Injection de Dépendances
+
+1. **Injection Manuelle** (Pres1.java)
+
+   - Création directe des instances et injection explicite
+
+2. **Injection par Réflexion** (Pres2.java)
+
+   - Utilisation de la réflexion Java pour charger et instancier des classes dynamiquement
+   - Configuration via un fichier texte externe
+
+3. **Injection par Spring avec Annotations** (PressSpringAnnotation.java)
+
+   - Utilisation du contexte Spring et des annotations comme @Service et @Repository
+   - Configuration automatique par scan de package
+
+4. **Injection par Spring avec XML** (PressSpringXml.java)
+   - Utilisation du contexte Spring avec configuration XML
+   - Définition des beans et de leurs dépendances dans config.xml
+
+## Comment Exécuter
+
+Pour tester les différentes approches, lancez les classes correspondantes dans le package `press`.
+Chaque classe démontre une approche différente d'injection de dépendances.
+
+## Screenshots
+
+1. **Injection Manuelle Pres1.java**
+   ![alt text](screenshot/Screenshot1.png)
+2. **Injection par Réflexion Pres2.java**
+   ![alt text](screenshot/Screenshot2.png)
+3. **Injection par Spring avec Annotations PressSpringAnnotation.java**
+   ![alt text](screenshot/Screenshot3.png)
+4. **Injection par Spring avec XML PressSpringXml.java**
+   ![alt text](screenshot/Screenshot4.png)
